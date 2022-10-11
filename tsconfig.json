@@ -1,0 +1,36 @@
+{
+	"extends": "./.svelte-kit/tsconfig.json",
+	"compilerOptions": {
+		"moduleResolution": "node",
+		"module": "ES2022",
+		"lib": ["ES2022"],
+		"target": "ES2022",
+		"importsNotUsedAsValues": "error",
+		"isolatedModules": true,
+		"allowJs": true,
+		"checkJs": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true,
+		"strictPropertyInitialization": false,
+		"paths": {
+			"$lib": ["src/lib"],
+			"$lib/*": ["src/lib/*"],
+			"$shared": ["src/components/shared"],
+			"$shared/*": ["src/components/shared/*"],
+			"$ui": ["src/components/ui"],
+			"$ui/*": ["src/components/ui/*"],
+			"$seo": ["src/lib/seo/index"],
+			"$seo/*": ["src/lib/seo/*"],
+			"$stores": ["src/stores"],
+			"$stores/*": ["src/stores/*"],
+			"$word": ["src/components/word"],
+			"$word/*": ["src/components/word/*"]
+		}
+	},
+	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte", "./jest-setup.ts"],
+	"exclude": ["node_modules/*", "dist/*"]
+}

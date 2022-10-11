@@ -1,0 +1,70 @@
+{
+	"name": "rewrite",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"package": "svelte-kit package",
+		"preview": "vite preview",
+		"postinstall": "husky install",
+		"test": "playwright test",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
+		"format": "prettier --write --plugin-search-dir=. .",
+		"eslint": "eslint ./src/**/*.{svelte,ts} --ignore-path .gitignore .",
+		"eslint:fix": "eslint ./src/**/*.{svelte,ts} --ignore-path .gitignore . --fix",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook"
+	},
+	"lint-staged": {
+		"./src/**/*.{svelte,ts}": [
+			"npm run lint"
+		],
+		"./.{ts,cjs,js}": [
+			"npm run lint"
+		]
+	},
+	"devDependencies": {
+		"@babel/core": "^7.18.9",
+		"@playwright/test": "^1.23.4",
+		"@storybook/addon-actions": "^6.5.10",
+		"@storybook/addon-essentials": "^6.4.22",
+		"@storybook/addon-interactions": "^6.5.9",
+		"@storybook/addon-links": "^6.5.9",
+		"@storybook/addon-svelte-csf": "^1.0.0",
+		"@storybook/builder-vite": "^0.1.37",
+		"@storybook/svelte": "^6.1.21",
+		"@storybook/testing-library": "^0.0.13",
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"@testing-library/svelte": "^3.1.3",
+		"@types/cookie": "^0.5.1",
+		"@types/jest": "^28.1.6",
+		"@typescript-eslint/eslint-plugin": "^5.30.7",
+		"@typescript-eslint/parser": "^5.30.7",
+		"autoprefixer": "^10.4.7",
+		"babel-loader": "^8.2.5",
+		"daisyui": "^2.19.1",
+		"eslint": "^8.20.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-storybook": "^0.6.1",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"fuzzysort": "^2.0.1",
+		"husky": "^8.0.1",
+		"jest": "^28.1.3",
+		"postcss": "^8.4.14",
+		"prettier": "^2.7.1",
+		"prettier-plugin-svelte": "^2.7.0",
+		"svelte": "^3.49.0",
+		"svelte-check": "^2.8.0",
+		"svelte-loader": "^3.1.3",
+		"svelte-preprocess": "^4.10.7",
+		"svelte-quicksearch-bar": "^1.0.5",
+		"tailwindcss": "^3.1.6",
+		"tslib": "^2.4.0",
+		"typescript": "^4.7.4",
+		"vite": "^3.0.2"
+	},
+	"type": "module"
+}
