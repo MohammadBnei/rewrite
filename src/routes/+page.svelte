@@ -1,20 +1,3 @@
-<script lang="ts" context="module">
-	import type { Load } from '@sveltejs/kit';
-
-	export const load: Load = async ({ fetch, session }) => {
-		try {
-			await fetch('/sitemap.xml');
-			return {
-				props: {
-					user: session.user
-				}
-			};
-		} catch (error) {
-			console.error(error);
-		}
-	};
-</script>
-
 <script lang="ts">
 	import type { IMetaTagProperties } from '$seo';
 	import HeadTags from '$shared/head-tags/HeadTags.svelte';
